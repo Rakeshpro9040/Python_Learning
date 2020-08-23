@@ -26,3 +26,5 @@ while c < 10:
 # Not Mandatory
 else:
     print('All Done')
+
+print('GIT')
