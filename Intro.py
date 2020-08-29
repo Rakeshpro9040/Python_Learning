@@ -6,7 +6,7 @@ list1 = [1, 2, 3, 4, 5, 6]
 
 if a == b and a != 0:
     print('Yes')
-    for i in range(1, 3):
+    for i in range(0, 3):
         print(i)
     print(1, div, 1)
     for i in list1:
