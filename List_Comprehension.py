@@ -18,6 +18,7 @@ print(y)
 # https://www.includehelp.com/python/calculate-square-of-a-given-number.aspx
 y = [x**2 for x in range(11) if x % 2 == 0]
 print(y)
+print('End')
 
 # Now lets implement nested for loop
 # Find square root of last list result
