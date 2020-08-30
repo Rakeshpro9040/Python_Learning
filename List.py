@@ -31,3 +31,19 @@ my_list_4 = [my_list_1, my_list_2, my_list_3]
 print(my_list_4)
 my_list_3[1] = 9
 print(my_list_3)
+
+# Lets discuss some advenced function
+# append adds the whole object at the end, but extend add the  individual elements at the end.
+my_list_3.append([1, 2])
+print(my_list_3)
+
+my_list_2.extend(['e', 'f'])
+print(my_list_2)
+
+# insert - adds a value in a specific index
+my_list_2.insert(0, 'z')
+print(my_list_2)
+
+# remove - will remove the first occurance of the sepicified value
+my_list_2.remove('e')
+print(my_list_2)
