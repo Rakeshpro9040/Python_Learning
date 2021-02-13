@@ -77,13 +77,13 @@
 # farenheit = [((9/5)*temp+32) for temp in celcius]
 # print(farenheit) # [32.0, 50.0, 68.0, 86.0]
 
-# # Nested For Loops
-# mylist = []
-# for x in [2,4,6]:
-#     for y in [1,10,1000]:
-#         mylist.append(x*y)
-# print(mylist) # [2, 20, 2000, 4, 40, 4000, 6, 60, 6000]
+# Nested For Loops
+mylist = []
+for x in [2,4,6]:
+    for y in [1,10,1000]:
+        mylist.append(x*y)
+print(mylist) # [2, 20, 2000, 4, 40, 4000, 6, 60, 6000]
 
-# # Using List Comprehensions
-# mylist = [x*y for x in [2,4,6] for y in [1,10,1000]]
-# print(mylist) # [2, 20, 2000, 4, 40, 4000, 6, 60, 6000]
+# Using List Comprehensions
+mylist = [x*y for x in [2,4,6] for y in [1,10,1000]]
+print(mylist) # [2, 20, 2000, 4, 40, 4000, 6, 60, 6000]

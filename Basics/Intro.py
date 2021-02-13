@@ -134,7 +134,11 @@
 # str3 = str1+str2
 # print(str3)
 
-def myfunc(s):
-    print(type(char.upper() if i % 2 else char.lower() for i, char in enumerate(s)))
-    return ''.join(char.upper() if i % 2 else char.lower() for i, char in enumerate(s))
-print(myfunc('AnthroW')) # aNtHrOw
+# def myfunc(s):
+#     print(type(char.upper() if i % 2 else char.lower() for i, char in enumerate(s)))
+#     return ''.join(char.upper() if i % 2 else char.lower() for i, char in enumerate(s))
+# print(myfunc('AnthroW')) # aNtHrOw
+
+input_string = input('Waiting for Input.. ')
+print(input_string)
+print(f'{input_string}')
