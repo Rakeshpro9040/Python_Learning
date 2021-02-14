@@ -1,5 +1,6 @@
 # import os
 from IPython.display import clear_output
+import random
 
 """
 Step 1: Write a function that can print out a board. Set up your board as a list,
@@ -43,7 +44,7 @@ def player_marker():
         marker2 = 'O'
     else:
         marker2 = 'X'
-    return marker1,marker2 # Return a Tuple here, so that later we can use Tuple Unpacking
+    return marker1, marker2  # Return a Tuple here, so that later we can use Tuple Unpacking
 
 # (player1_marker,player2_marker) = player_marker() # Tuple Unpacking
 # print('player1_marker: '+player1_marker)
@@ -81,23 +82,22 @@ def player_position_assign(board,marker,position):
 Step 4: run the win_check function against our player_board - it should return True
 '''
 def player_win_check(board,marker):
-    result = False
-    for i in [1,2,3,4]: # 1 is for horizontal; 3 is for vertical; 2 is for left cross, 4 is for right cross
+    for i in [1,2,3,4]: # 1 is for horizontal; 3 is for vertical; 2 is for left diagonal, 4 is for right diagonal
         if i == 1:
             for j in [0,3,6]:
                 if board[j] == board[j+1] == board[j+2] == marker: # for horizontal add 1
-                    result = True
+                    return True
         if i == 4:
-            if board[0] == board[4] == board[8] == marker: # for right cross add 4
-                    result = True
+            if board[0] == board[4] == board[8] == marker: # for right diagonal add 4
+                    return True
         if i == 2:
-            if board[2] == board[4] == board[6] == marker: # for right cross add 2
-                    result = True
+            if board[2] == board[4] == board[6] == marker: # for right diagonal add 2
+                    return True
         if i == 3:
             for j in [0,1,2]:
                 if board[j] == board[j+3] == board[j+6] == marker: # for vertical add 3
-                    result = True
-    return result
+                    return True
+    return False
 
 # player_board = ['1','1','1','1','1','1','0','1','']
 # display_board(player_board)
@@ -108,14 +108,18 @@ Step 5: Write a function that uses the random module to randomly decide which pl
 You may want to lookup random.randint() Return a string of which player went first.
 '''
 
+def random_player_chose():
+    x = random.randint(0, 1)
+    if x == 1:
+        return 'Player 1'
+    else:
+        return 'Player 2'
+
 '''
 Step 6: Write a function that returns a boolean indicating whether a space on the board is freely available.
 '''
 def board_space_check(board, position):
-    result = True
-    if board[position] != '':
-        result = False
-    return result
+    return board[position] == ''
 
 # print(board_space_check(player_board,2))
 
@@ -123,12 +127,10 @@ def board_space_check(board, position):
 Step 7: Write a function that checks if the board is full and returns a boolean value. True if full, False otherwise.
 '''
 def full_board_check(board):
-    result = True
     for i,val in enumerate(board):
         if val == '':
-            result = False
-            break
-    return result
+            return False
+    return True
 
 # print(full_board_check(player_board))
 
@@ -149,7 +151,7 @@ def player_position_with_space_check(board):
 Step 9: Write a function that asks the player if they want to play again and returns a boolean True if they do want to play again.
 '''
 def replay():
-    result = input("Want to Replay this game, Press 'Y' or 'N': ")
+    result = input("Want to Replay this game, Enter 'Y' or 'N': ")
     if result == 'Y':
      return True
     else:
@@ -163,14 +165,18 @@ Step 10: Here comes the hard part! Use while loops and the functions you've made
 print('Welcome to Tic Tac Toe!')
 
 while True:
+
+    # Setup board
     player_board = [''] * 9
     display_board(player_board)
     game_on = not full_board_check(player_board)
 
     # Define player-1, player-2 Marker
-    (player1_marker, player2_marker) = player_marker()
+    player1_marker, player2_marker = player_marker()
     print('Player1 Marker: ' + player1_marker)
     print('Player2 Marker: ' + player2_marker)
+
+    # Call Rand function here for turn
 
     while game_on:
 
@@ -179,14 +185,14 @@ while True:
         player1_position = player_position_with_space_check(player_board)
         player_position_assign(player_board,player1_marker,player1_position)
         if player_win_check(player_board, player1_marker):
-            game_result = 'Player 1 WON!!!'
+            game_result = 'Player 1 has WON!!!'
             print('Game Result: ' + game_result)
             break
         print("Player 1's Result")
         display_board(player_board)
 
         if full_board_check(player_board):
-            game_result = "It's a Tie"
+            game_result = "It's a Tie!!!"
             print('Game Result: ' + game_result)
             break
 
@@ -195,7 +201,7 @@ while True:
         player2_position = player_position_with_space_check(player_board)
         player_position_assign(player_board,player2_marker,player2_position)
         if player_win_check(player_board, player2_marker):
-            game_result = 'Player 2 WON!!!'
+            game_result = 'Player 2 has WON!!!'
             print('Game Result: ' + game_result)
             break
         print("Player 2's Result")
