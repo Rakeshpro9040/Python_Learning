@@ -24,7 +24,7 @@ class Account:
         print(f'New Balance: {self.balance}')
 
     def withdraw(self, rem_balance):
-        if self.balance - rem_balance > 0:
+        if self.balance - rem_balance >= 0:
             self.balance = self.balance - rem_balance
             print(f'New Balance: {self.balance}')
         else:
