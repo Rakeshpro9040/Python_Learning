@@ -87,3 +87,11 @@ print(mylist) # [2, 20, 2000, 4, 40, 4000, 6, 60, 6000]
 # Using List Comprehensions
 mylist = [x*y for x in [2,4,6] for y in [1,10,1000]]
 print(mylist) # [2, 20, 2000, 4, 40, 4000, 6, 60, 6000]
+
+x = []
+for i in range(1,10):
+    x.append(i)
+print (x)
+
+x = [i for i in range(1,10)]
+print (x)
