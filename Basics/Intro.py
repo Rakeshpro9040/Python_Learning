@@ -64,7 +64,7 @@ a = input("User Input: ")
 print("Output DataType: ", type(a))
 print('Output: %s' %(a))
 
-Rakesh Practice
+# Rakesh Practice
 mylist = ['0', '', '']
 print(int(mylist[0]))
 int('')
