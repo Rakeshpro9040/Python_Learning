@@ -29,7 +29,7 @@ def fibon(n):
 print(fibon(10)) # [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 
 ## next() and iter() built-in functions
-# nett()
+# next()
 def simple_gen():
     for x in range(3):
         yield x
@@ -38,15 +38,16 @@ g = simple_gen()
 print(next(g)) # 0
 print(next(g)) # 1
 print(next(g)) # 2
-print(next(g)) # StopIteration Error
+# print(next(g)) # StopIteration Error
+
+print('----------------------------------')
 
 # iter()
 s = 'hello'
 #Iterate over string
-for let in s:
-    print(let)
+# for let in s:
+#     print(let)
 
-print(next(s)) # TypeError
+# print(next(s)) # TypeError
 s_iter = iter(s)
 print(next(s_iter)) # h
-
