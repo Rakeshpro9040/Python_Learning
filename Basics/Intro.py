@@ -135,7 +135,7 @@ str3 = str1+str2
 print(str3)
 
 def myfunc(s):
-    print(type(char.upper() if i % 2 else char.lower() for i, char in enumerate(s)))
+    # print(type(char.upper() if i % 2 else char.lower() for i, char in enumerate(s)))
     return ''.join(char.upper() if i % 2 else char.lower() for i, char in enumerate(s))
 print(myfunc('AnthroW')) # aNtHrOw
 
@@ -179,3 +179,31 @@ def f1(x=1,y=2):
     print(x,y)
 f1(y=2,x=1)
 
+for i in enumerate('rakesh'):
+    (x,y) = i
+    print(x,',',y)
+
+x = "--".join(['a','b','c'])
+print(x)
+
+x1 = ['a', 'b', 'c']
+x2 = ['x', 'y', 'z']
+x3 = list(zip(x1,x2))
+print(x3) # [('a', 'x'), ('b', 'y'), ('c', 'z')]
+x4 = []
+x5 = []
+for i,j in x3:
+    x4.append(i)
+    x5.append(j)
+print(x4) # ['a', 'b', 'c']
+print(x5) # ['x', 'y', 'z']
+
+from random import shuffle
+from random import randint
+lst1 = ['a', 'b', 'c', 'd', 'e']
+shuffle(lst1)
+print(lst1) # ['c', 'a', 'd', 'e', 'b']
+randint(0,10) # 9
+
+nm = input('Enter you name: ')
+print(nm)
