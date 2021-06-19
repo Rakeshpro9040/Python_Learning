@@ -1,3 +1,7 @@
+import os
+os.system('cls') # this line clears the screen 'cls' = windows 'clear' = unix
+# below is my main script
+
 def genfibon(n):
     """
     Generate a fibonnaci sequence up to n
@@ -13,6 +17,8 @@ for num in genfibon(10):
 '''
 1 1 2 3 5 8 13 21 34 55
 '''
+
+print('----------------------------------')
 
 ## Normal Function
 def fibon(n):
@@ -51,3 +57,8 @@ s = 'hello'
 # print(next(s)) # TypeError
 s_iter = iter(s)
 print(next(s_iter)) # h
+print(next(s_iter)) # e
+print(next(s_iter)) # l
+print(next(s_iter)) # l
+print(next(s_iter)) # o
+# print(next(s_iter)) # StopIteration

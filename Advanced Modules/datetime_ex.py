@@ -24,9 +24,9 @@ result = date1 - date2
 print(type(result))
 print(result.days)
 
-print('-------------datetime onbject-------------')
-datetime1 = datetime(2021,10,3, 14,20)
-datetime2 = datetime(2020,10,3, 12,20)
+print('-------------datetime object-------------')
+datetime1 = datetime(2021,10,3,14,20)
+datetime2 = datetime(2020,10,3,12,20)
 mydiff = datetime1 - datetime2
 print(mydiff)
 print(mydiff.seconds)
@@ -46,7 +46,7 @@ Mon May 17 00:00:00 2021
 -------------date class-------------
 <class 'datetime.timedelta'>
 365
--------------datetime onbject-------------
+-------------datetime object-------------
 365 days, 2:00:00
 7200
 31543200.0
