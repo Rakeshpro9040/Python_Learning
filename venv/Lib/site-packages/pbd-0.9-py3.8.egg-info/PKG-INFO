@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: pbd
+Version: 0.9
+Summary: Pbd is a Python module to disassemble serialized protocol buffers descriptors (https://developers.google.com/protocol-buffers/).
+Home-page: https://github.com/rsc-dev/pbd
+Author: Radoslaw Matusiak
+Author-email: radoslaw.matusiak@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/rsc-dev/pbd/releases/tag/0.9
+Description: UNKNOWN
+Keywords: disassembler,pb2,protocol buffers,reverse
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Disassemblers

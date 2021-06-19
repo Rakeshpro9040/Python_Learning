@@ -1,4 +1,7 @@
+import os
 import random
+
+os.system('cls')
 print('---------randint and seed------------')
 print(random.randint(0,100)) # 53, 25, ...
 random.seed(101)
@@ -7,6 +10,7 @@ print(random.randint(0,100)) # 24
 print(random.randint(0,100)) # 69
 print(random.randint(0,100)) # 45
 print(random.randint(0,100)) # 59
+
 print('---------list------------')
 mylist = list(range(0,10))
 print(mylist)

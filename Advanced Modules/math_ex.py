@@ -1,5 +1,8 @@
+import os
 import math
-from math import * 
+from math import *
+os.system('cls')
+
 # help(math)
 print('--------------Basic Math Operation--------------')
 val = 4.35
@@ -16,3 +19,4 @@ print(sin(10)) # -0.5440211108893698
 # 108 degree = pi radians
 print(degrees(pi/2)) # 90.0
 print(radians(180)) # 3.141592653589793
+print(math.nan+1)

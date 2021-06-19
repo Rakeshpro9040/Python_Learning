@@ -1,23 +1,27 @@
+import os
+import datetime as dt
+from datetime import time
+from datetime import datetime
+from datetime import date
+os.system('cls')
+
 print('-------------datetime module-------------')
-import datetime
-mytime = datetime.time(2,20)
+mytime = time(2,20,20)
 print(mytime.minute)
 print(mytime)
 
 print('-------------date class-------------')
-today = datetime.date.today()
+today = date.today()
 print(today)
 print(today.year) # Attribute of date class
 print(today.ctime())
 
 print('-------------datetime class-------------')
-from datetime import datetime
-mydatetime = datetime(2021,10,3, 14,20,1)
+mydatetime = datetime(2021,10,3,14,20,1,200)
 print(mydatetime)
 print(mydatetime.replace(year=2020))
 
 print('-------------date class-------------')
-from datetime import date
 date1 = date(2021,11,3)
 date2 = date(2020,11,3)
 result = date1 - date2
