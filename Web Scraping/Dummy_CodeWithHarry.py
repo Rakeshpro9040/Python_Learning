@@ -108,5 +108,15 @@ for elem in navbarSupportedContent.contents:
 # for elem in navbarSupportedContent.parents:
 #     print(elem.name)
 
-print(navbarSupportedContent.next_sibling)
-print(navbarSupportedContent.next_sibling)
+# Get Siblings from next or previous link
+# print(navbarSupportedContent.previous_sibling.previous_sibling)
+# print(navbarSupportedContent.next_sibling)
+
+# CSS Selector
+id_loginModal = soup.select('#loginModal')
+print(id_loginModal)
+
+# # - Id, . - Class
+
+# Manipulate DOM not only read, also can be used as Witre
+# insert()
