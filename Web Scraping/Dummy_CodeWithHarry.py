@@ -32,6 +32,11 @@ print(type(titleString))
 print(titleString)
 
 # 4. Comment
+markup = "<p><!-- this is a comment --><p>"
+soup2 = bs4.BeautifulSoup(markup)
+print(type(soup2.p.string))
+print(soup2.p.string)
+# exit()
 
 # 5. String
 titleText = title.text
@@ -79,3 +84,29 @@ anchros = soup.find_all('a')
 
 all_links = {str(url + anchor['href']).strip() for anchor in anchros}
 print(all_links)
+
+# Get all content realted to a Id/Class
+navbarSupportedContent = soup.find(id='navbarSupportedContent')
+# print(navbarSupportedContent.children)
+# print(navbarSupportedContent.contents)
+# print(navbarSupportedContent.parent) # List
+# print(navbarSupportedContent.parents)  # Generator
+# exit()
+for elem in navbarSupportedContent.contents:
+    print(elem)
+
+# .contens - A tag's children are available as a list -- Slower -- Memory Cosume
+# .children - A tag's children are available as a generator -- Fatser -- Memory Efficient
+
+# for elem in navbarSupportedContent.strings:
+#     print(elem)
+
+# for elem in navbarSupportedContent.stripped_strings:
+#     print(elem)
+
+# Get Tree like structure
+# for elem in navbarSupportedContent.parents:
+#     print(elem.name)
+
+print(navbarSupportedContent.next_sibling)
+print(navbarSupportedContent.next_sibling)
