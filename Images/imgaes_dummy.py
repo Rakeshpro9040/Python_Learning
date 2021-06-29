@@ -49,5 +49,14 @@ h = 1300
 # Color Transparency # RGBA - Red, Green, Blue, and Alpha
 # Alpha - 0 (Transparent), 255 (Opaque)
 
+red = Image.open('.//Images//red_color.jpg')
+red.putalpha(128)
+# print(red.show())
 
+blue = Image.open('.//Images//blue_color.png')
+blue.putalpha(254)
+# print(blue.show())
 
+# Generate Purple
+blue.paste(im=red, box=(0, 0), mask=red)
+# print(blue.show())
