@@ -19,16 +19,16 @@ print(M.select('inbox')) # To scan inbox
 typ, data = M.search(None, 'SUBJECT "NEW TEST PYTHON"') # Returns Tuple
 # Can be serached using Date, From, ..
 print(typ)
-email_id = data
+email_id = data # Data of all email id
 print(email_id)
 email_id = data[0]
 print(email_id) # Returns Unique Id
 
 # Step: Fetch Email Data
-result, email_data = M.fetch(email_id, '(RFC822)')
+result, email_data = M.fetch(email_id, '(RFC822)') # Fetch a particular Email Id using a protocol
 print(result)
 print(email_data)
-raw_email = email_data[0][1]
+raw_email = email_data[0][1] 
 raw_email_string = raw_email.decode('utf-8')
 email_message = email.message_from_string(raw_email_string)
 print(type(email_message))
