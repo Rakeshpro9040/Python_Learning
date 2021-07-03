@@ -20,3 +20,5 @@ print(s.istitle()) # Is a title like Hello
 print(s.endswith('o'))
 print(s[-1] == 'o')
 print(s.split('e')) # split at e
+print(s.partition('e')) 
+# It will spilt at 1st occ and also include separator
