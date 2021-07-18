@@ -25,3 +25,4 @@ l.remove(7) # Removes 1st Instance
 print(l)
 l.reverse()
 print(l)
+
