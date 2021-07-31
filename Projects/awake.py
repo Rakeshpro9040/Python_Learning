@@ -19,30 +19,30 @@ from datetime import datetime
 os.system('cls')
 pyautogui.FAILSAFE = False
 numMin = None
-print(pyautogui.size()) # Size(width=1920, height=1080)
-print((len(sys.argv)<2) or sys.argv[1].isalpha() or int(sys.argv[1])<1)
-if ((len(sys.argv)<2) or sys.argv[1].isalpha() or int(sys.argv[1])<1):
-    numMin = 1 # Set Timer Here (In Minutes)
+# print(pyautogui.size()) # Size(width=1920, height=1080)
+# print((len(sys.argv)<2) or sys.argv[1].isalpha() or int(sys.argv[1])<1)
+if ((len(sys.argv) < 2) or sys.argv[1].isalpha() or int(sys.argv[1]) < 1):
+    numMin = 3  # Set Timer Here (In Minutes)
 else:
     numMin = int(sys.argv[1])
-print(numMin)
+# print(numMin)
 while(True):
-    x=0
-    print(f"x1: {x}")
-    while(x<numMin):
-        print("Sleeping for 1 minute...")
-        time.sleep(45) # Set Sleep Timer Here (In Seconds)
-        x+=1
-        print(f"x2: {x}")
-    print("Down Move Started")
-    for i in range(0,200):
-        pyautogui.moveTo(0,i*4)
-    print("Down Move Ended")
-    pyautogui.moveTo(1,1)
-    print("Back to Initial Position")
-    for i in range(0,1):
-        # pyautogui.press("shift")
-        pass
-        print("Shift Clicked")
-    print("Movement made at {}".format(datetime.now().time()))
-{"mode":"full","isActive":false}
+    x = 0
+    # print(f"x1: {x}")
+    while(x < numMin):
+        # print("Sleeping for 1 minute...")
+        time.sleep(60)  # Set Sleep Timer Here (In Seconds)
+        x += 1
+        # print(f"x2: {x}")
+    # print("Down Move Started")
+    for i in range(0, 200):
+        pyautogui.moveTo(0, i*4)
+    # print("Down Move Ended")
+    pyautogui.moveTo(1, 1)
+    # print("Back to Initial Position")
+    for i in range(0, 3):
+        pyautogui.press("shift")  # Click Shift 3 times
+        # pass
+        # print("Shift Clicked")
+    print("Movement made at {}".format(datetime.now().time()))  # Print the Log
+{"mode": "full", "isActive": false}
