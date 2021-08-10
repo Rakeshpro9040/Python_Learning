@@ -1,0 +1,4 @@
+INFO:root:At 2021-08-10 12:50:39 - Running "add" with arguments (3, 3)
+INFO:root:At 2021-08-10 12:50:39 - Running "add" with arguments (4, 5)
+INFO:root:At 2021-08-10 12:50:39 - Running "sub" with arguments (10, 5)
+INFO:root:At 2021-08-10 12:50:39 - Running "sub" with arguments (20, 10)

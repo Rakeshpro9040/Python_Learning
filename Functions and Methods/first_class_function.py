@@ -11,4 +11,3 @@ def square(x):
 
 f = square
 print(f(5)) # 25
-

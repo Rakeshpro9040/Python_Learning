@@ -21,6 +21,9 @@ mydatetime = datetime(2021,10,3,14,20,1,200)
 print(mydatetime)
 print(mydatetime.replace(year=2020))
 
+curr_time = datetime.now().replace(microsecond=0)
+print(f"curr_time: {curr_time}")
+
 print('-------------date class-------------')
 date1 = date(2021,11,3)
 date2 = date(2020,11,3)
