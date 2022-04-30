@@ -1,3 +1,5 @@
 /.idea
 /Dummy Gitignore Folder
 /__pycache__
+*.pyc
+tempCodeRunnerFile.py
