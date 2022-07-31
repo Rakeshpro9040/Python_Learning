@@ -1,4 +1,4 @@
-# Without Clousure
+# Without Clusure
 def outer_func(msg):
 
     def inner_func():
@@ -9,9 +9,9 @@ def outer_func(msg):
     
     return inner_func()
 
-outer_func('Hi') # Hi
+outer_func('Hi from without closure') # Hi
 
-# With Clousure
+# With Closure
 def outer_func_clo(msg):
 
     def inner_func():
@@ -28,8 +28,8 @@ print(outer_func_clo('Hi'))
 print(outer_func_clo('Hi').__name__)
 # inner_func
 
-hi_outer_func = outer_func_clo('Hi')
-hello_outer_func = outer_func_clo('Hello')
+hi_outer_func = outer_func_clo('Hi from closure')
+hello_outer_func = outer_func_clo('Hello from closure')
 
 hi_outer_func()
 # Hi

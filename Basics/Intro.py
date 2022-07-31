@@ -76,43 +76,6 @@ def myfunc (mybool):
         return 'Goodbye'
 print(myfunc(True))
 
-# *args Example
-def myfunc(*args):
-    print(args)
-    return sum(args)
-
-print(myfunc(1,2,3)) # 6 # (1, 2, 3) ## Output is a Tuple
-print(myfunc(1,2,3,4,5,6)) # 21 # (1, 2, 3, 4, 5, 6)
-
-# **kwargs Example
-def myfunc(**kwargs):
-    print(kwargs)
-    if 'fruit' in kwargs:
-        print('My fruit choice is {}'.format(kwargs['fruit']))
-    else:
-        print('I did not find any fruit here')
-
-myfunc(fruit='apple', veggie='lettuce')
-# {'fruit': 'apple', 'veggie': 'lettuce'}
-# My fruit choice is apple # Output is a Dictionary
-
-# Mix args Example
-def myfunc(*args,**kwargs):
-    print(args)
-    print(kwargs)
-    print('I would like {} {}'.format(args[0],kwargs['food']))
-
-myfunc(10,20,30,fruit='orange',food='eggs',animal='dog')
-'''
-(10, 20, 30)
-{'fruit': 'orange', 'food': 'eggs', 'animal': 'dog'}
-I would like 10 eggs
-'''
-
-def myfunc(*args):
-    return [x for x in args if x%2 == 0]
-print(myfunc(1,2,3,10,4,6,7))
-
 def myfunc(in_str):
     out_str = ''
     for (i,x) in enumerate(in_str):
@@ -207,3 +170,6 @@ randint(0,10) # 9
 
 nm = input('Enter you name: ')
 print(nm)
+
+str1 = 'Hello'
+print(str1[-5:-1])

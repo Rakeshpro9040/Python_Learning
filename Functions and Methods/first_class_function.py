@@ -9,5 +9,5 @@ print(f) # 25
 def square(x):
     return x * x
 
-f = square
+f = square # notice that we are not using the () here
 print(f(5)) # 25

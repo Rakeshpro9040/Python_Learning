@@ -6,7 +6,7 @@ print(os.getcwd())
 
 # Step-1: Open the file
 data = open(
-    'C:\\Users\\rakes\\PycharmProjects\\Python_Introduction\\PDF & EXCEL\\example.csv', encoding='utf-8')
+    'D:\\C_Workspaces_Repositories\\GitHub_Repositories\\Python_Learning\\PDF & EXCEL\\example.csv', encoding='utf-8')
 
 # Step-2: csv.reader
 csv_data = csv.reader(data)
