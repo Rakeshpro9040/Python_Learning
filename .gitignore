@@ -115,3 +115,5 @@ config*
 /Projects/Keep Windows Active/
 /Projects/Auto Clicker/
 Misc*
+.vscode
+.mypy_cache
