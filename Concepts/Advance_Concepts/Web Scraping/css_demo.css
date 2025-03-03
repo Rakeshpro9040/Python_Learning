@@ -1,0 +1,26 @@
+/* ID - Single Use */
+/* property: value */
+#para2 {
+  color: red;
+  font-size: large;
+}
+
+/* Class - Multi Use */
+.cool {
+  color: hotpink;
+  font-family: Calibre;
+  font-size: large;
+}
+
+.cool1 {
+  color: indigo;
+  font-family: Calibre;
+  font-size: large;
+}
+
+/* Paragraph */
+p {
+  color: green;
+  font-family: Verdana;
+  font-size: 300%;
+}

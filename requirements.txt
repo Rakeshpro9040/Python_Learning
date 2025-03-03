@@ -1,0 +1,8 @@
+python-dotenv
+azure-identity
+azure-keyvault
+pandas
+tabulate
+texttable
+prettytable
+rich
